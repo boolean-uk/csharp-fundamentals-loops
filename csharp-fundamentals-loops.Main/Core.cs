@@ -53,40 +53,52 @@ namespace csharp_fundamentals_loops.Main
         public bool stepFour(int num)
         {
             // TODO: 6. Write a for loop that checks if num is in the favouriteNumbers array            
-            /*  
-             *  for (int i = 0; i <= favouriteNumbers.Length; i++)
+            bool isInFavouriteNumbers = false;
+
+            for (int i = 0; i < favouriteNumbers.Length; i++)
             {
-              if (num == favouriteNumbers[i])
-            {
-              return true;
+                if (num == favouriteNumbers[i])
+                {
+                    isInFavouriteNumbers = true;
+                    break;
+                }
             }
-            else 
-            {
-              continue;
-            }
-            }
-            */
-            if (favouriteNumbers.Contains(num)) 
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+
+            return isInFavouriteNumbers;
+
+            //if (favouriteNumbers.Contains(num)) 
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
         }
 
         public bool stepFive(string hobby)
         {
             // TODO 5. Write a for loop that checks if the hobby String is in the myHobbies array
-            if (myHobbies.Contains(hobby))
+            //if (myHobbies.Contains(hobby))
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+            bool isInMyHobbies = false;
+
+            for (int i = 0; i < myHobbies.Length; i++)
             {
-                return true;
+                if (hobby == myHobbies[i])
+                {
+                    isInMyHobbies = true;
+                    break;
+                }
             }
-            else
-            {
-                return false;
-            }
+
+            return isInMyHobbies;
         }
     }
 
