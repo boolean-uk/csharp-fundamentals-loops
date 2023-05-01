@@ -9,7 +9,7 @@ namespace csharp_fundamentals_loops.Main
 {
     public class Core
     {
-        public int[] numsZeroToThree= new int[4];
+        public int[] numsZeroToThree = new int[4];
         public int[] numsFiveToTen = new int[6];
         public int[] countdown = new int[4];
 
@@ -20,32 +20,73 @@ namespace csharp_fundamentals_loops.Main
         public void stepOne()
         {
             // TODO: 1. Write a for loop that adds the numbers 0 to 3 to the numsZeroToThree array                        
-            throw new NotImplementedException();            
+            for (int i = 0; i <= 3; i++)
+            {
+                numsZeroToThree.SetValue(i, i);
+                // numsZeroToThree = numsZeroToThree.Append(i).ToArray();
+            }
         }
 
         public void stepTwo()
         {
             // TODO: 2. Write a for loop that adds the numbers 5 to 10 to the numsFiveToTen array
-            throw new NotImplementedException();
+            int n = 0;
+            for (int i = 5; i <=10; i++)
+            {                
+                numsFiveToTen.SetValue(i,n);
+                n++;
+            };
         }
 
         public void stepThree()
         {
             // TODO: 3. Write a for loop that adds the numbers 3 to 0 (in that order) to the countdown array
-            throw new NotImplementedException();
+            int c = 0;
+            for (int i = 3; i >= 0; i--)
+            {
+                countdown.SetValue(i, c);
+                c++;
+            }
 
         }
 
         public bool stepFour(int num)
         {
             // TODO: 6. Write a for loop that checks if num is in the favouriteNumbers array            
-            throw new NotImplementedException();
+            /*  
+             *  for (int i = 0; i <= favouriteNumbers.Length; i++)
+            {
+              if (num == favouriteNumbers[i])
+            {
+              return true;
+            }
+            else 
+            {
+              continue;
+            }
+            }
+            */
+            if (favouriteNumbers.Contains(num)) 
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool stepFive(string hobby)
         {
             // TODO 5. Write a for loop that checks if the hobby String is in the myHobbies array
-            throw new NotImplementedException();
+            if (myHobbies.Contains(hobby))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 
