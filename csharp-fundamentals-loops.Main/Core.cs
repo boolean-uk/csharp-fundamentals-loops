@@ -70,5 +70,5 @@ namespace csharp_fundamentals_loops.Main
             }
             return false;
         }
-    }s
+    }
 }
