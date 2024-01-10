@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,32 +21,57 @@ namespace csharp_fundamentals_loops.Main
         public void stepOne()
         {
             // TODO: 1. Write a for loop that adds the numbers 0 to 3 to the numsZeroToThree array                        
-            throw new NotImplementedException();            
+            for (int i = 0; i < numsZeroToThree.Length; i++)
+            {
+                numsZeroToThree[i] = i;
+            }        
         }
 
         public void stepTwo()
         {
             // TODO: 2. Write a for loop that adds the numbers 5 to 10 to the numsFiveToTen array
-            throw new NotImplementedException();
+            int counter = 5;
+           for (int i = 0;i < numsFiveToTen.Length; i++)
+            {
+                numsFiveToTen[i] = counter;
+                counter++;
+            }
         }
 
         public void stepThree()
         {
             // TODO: 3. Write a for loop that adds the numbers 3 to 0 (in that order) to the countdown array
-            throw new NotImplementedException();
+            for(int i = 0; i < 4; i++)
+            {
+                countdown[i] = 3 - i;
+            }
 
         }
-
+        
         public bool stepFour(int num)
         {
             // TODO: 6. Write a for loop that checks if num is in the favouriteNumbers array            
-            throw new NotImplementedException();
+            foreach (int fNum in favouriteNumbers)
+            {
+                if (num == fNum)
+                {
+                    return true;
+                } 
+            } 
+            return false;
         }
 
         public bool stepFive(string hobby)
         {
             // TODO 5. Write a for loop that checks if the hobby String is in the myHobbies array
-            throw new NotImplementedException();
+            foreach(string h in myHobbies)
+            {
+                if (h == hobby)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 
