@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using csharp_fundamentals_loops.Main;
+
+Core core = new Core();
